@@ -10,8 +10,8 @@ import (
 )
 
 func TestPost(t *testing.T) {
-	url := "http://localhost:8883/api/v1/test-dubbo/UserService/com.dubbogo.pixiu.UserService?" +
-		"group=test&version=1.0.0&method=GetUserbyName"
+	url := "http://localhost:8882/api/v1/test-dubbo/UserService/org.apache.dubbo.sample.UserProvider?" +
+		"group=dubbo-test&version=1.0.0&method=GetUserbyName"
 	data := "{\"types\":\"string\",\"values\":\"tc\" }"
 	client := &http.Client{Timeout: 5 * time.Second}
 	req, err := http.NewRequest("POST", url, strings.NewReader(data))

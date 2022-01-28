@@ -2,7 +2,7 @@ dubbo:
   registries:
     demoZK:
       protocol: zookeeper
-      address: localhost:2181
+      address: yuluo-13:2181
   protocols:
     triple:
       name: tri

@@ -42,7 +42,7 @@ func (s *GreeterProvider) SayHelloStream(svr api.Greeter_SayHelloStreamServer) e
 func main() {
 	config.SetProviderService(&GreeterProvider{})
 
-	path := "/Users/laurence/Downloads/dubbo-test-samples/context/triple/go-server/conf/dubbogo.yml"
+	path := "/Users/windwheel/Documents/gitrepo/dubbo-go-triple-demo/context/triple/go-server/conf/dubbogo.yml"
 	if err := config.Load(config.WithPath(path)); err != nil {
 		panic(err)
 	}

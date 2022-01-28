@@ -21,7 +21,7 @@ func init() {
 
 // export DUBBO_GO_CONFIG_PATH= PATH_TO_SAMPLES/helloworld/go-client/conf/dubbogo.yml
 func main() {
-	path := "/Users/laurence/Downloads/dubbo-test-samples/context/triple/go-client/conf/dubbogo.yml"
+	path := "/Users/windwheel/Documents/gitrepo/dubbo-go-triple-demo/context/triple/go-client/conf/dubbogo.yml"
 
 	config.SetConsumerService(grpcGreeterImpl)
 	err := config.Load(config.WithPath(path))
