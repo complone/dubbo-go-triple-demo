@@ -1,0 +1,17 @@
+dubbo:
+  registries:
+    demoZK:
+      protocol: zookeeper
+      address: node1:2181
+  protocols:
+    dubbo:
+      name: dubbo
+      port: 20000
+  consumer:
+    registery-ids:
+      - zk
+    apaptive-service: true
+    references:
+      UserProvider:
+        protocol: dubbo
+        interface: org.apache.dubbo.ContextContent

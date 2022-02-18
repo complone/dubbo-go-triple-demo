@@ -10,9 +10,15 @@ import (
 )
 
 func TestPost(t *testing.T) {
-	url := "http://localhost:8882/api/v1/test-dubbo/UserService/org.apache.dubbo.sample.UserProvider?" +
-		"group=dubbo-test&version=1.0.0&method=GetUserbyName"
+
+	url := "http://localhost:8883/api/v1/test-dubbo/UserProvider/com.dubbogo.pixiu.UserService?" +
+		"group=dubbo-test&version=1.0.0&method=GetUserByName"
 	data := "{\"types\":\"string\",\"values\":\"tc\" }"
+
+	//ctx := context.Background()
+	//tpsNum,_ :=strconv.Atoi(os.Getenv("tps"))
+	//parallel,_ := strconv.Atoi(os.Getenv("parallel"))
+
 	client := &http.Client{Timeout: 5 * time.Second}
 	req, err := http.NewRequest("POST", url, strings.NewReader(data))
 	assert.NoError(t, err)

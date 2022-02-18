@@ -58,4 +58,11 @@ ctxAtta := ctx.Value(constant.DubboCtxKey("attachment")).(map[string]interface{}
 	intValue := ctxAtta["int-value"].(int64),
 ```
 
+3.使用wrk对pixiu进行性能测试
 
+```
+cd  /Users/windwheel/Documents/gitrepo/dubbo-go-triple-demo/context/dubbo/go-client/script/ 
+
+wrk -d3s -c20 -t5 -s  test.lua  "http://localhost:8883/api/v1/test-dubbo/UserProvider/com.dubbogo.pixiu.UserService?group=dubbo-test&version=1.0.0&method=GetUserByName"
+
+```
