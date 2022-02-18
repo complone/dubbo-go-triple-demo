@@ -10,5 +10,5 @@ dubbo:
   consumer:
     references:
       UserProvider:
-        protocol: dubbo
-        interface: org.apache.dubbo.ContextContent
+        protocol: http
+        interface: com.dubbogo.pixiu.UserService
